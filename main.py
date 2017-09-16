@@ -5,7 +5,8 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/<nombre>')
 def index(nombre='SALAME!'):
-	return render_template('index.html', nombre=nombre)
+	listanombres = ['vos','dios','todos']
+	return render_template('index.html', nombre=nombre, milista=listanombres)
 
 @app.route('/sub1')
 def sub1():

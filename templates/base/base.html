@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOLA, {{ nombre }}</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">|
+	<script
+	 	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 	crossorigin="anonymous">		
+	</script>
+</head>
+<body>
+	<h2> Me cago en la hostia</h2>
+	{% block contenido %}
+	{% endblock %}
+	<footer>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+		<img src="{{ url_for('static', filename='img/pirincho.gif') }}">
+	</footer>
+</body>
+</html>
