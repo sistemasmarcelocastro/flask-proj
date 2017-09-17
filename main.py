@@ -1,12 +1,17 @@
 from flask import Flask 
 from flask import render_template
+
+import forms
 app = Flask(__name__)
 
 @app.route('/')
 @app.route('/<nombre>')
 def index(nombre='SALAME!'):
 	listanombres = ['vos','dios','todos']
-	return render_template('index.html', nombre=nombre, milista=listanombres)
+	formulario1 = forms.Formulario1()
+	return render_template('index.html', nombre=nombre, milista=listanombres, formulario1=formulario1)
+
+
 
 @app.route('/sub1')
 def sub1():

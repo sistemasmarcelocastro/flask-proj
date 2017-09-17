@@ -1,5 +1,11 @@
 {% extends 'base/base.html' %}
 {% block contenido %}
-	{% from "macro.html" import macro1%}
-	{{ macro1(milista) }}
+	{% from "macro.html" import macro1 %}
+		{{ macro1(milista) }}
+	{% from "macro.html" import macro_formulario %}
+		<form>
+			{{ macro_formulario(formulario1.usuario) }}
+			{{ macro_formulario(formulario1.correo) }}
+			{{ macro_formulario(formulario1.comentario) }}
+		</form>
 {% endblock %}
